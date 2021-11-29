@@ -79,7 +79,7 @@ namespace ListReview
             PrintList(theList);
 
             Console.WriteLine("\nLet's remove 50 from it!");
-            theList.Remove(50); // This is different than RemoveAt. Remove will simply go find whatever you put in the parenthesis and remove it.
+            theList.Remove(50); // This is different than RemoveAt. Remove will simply go find the first instance of whatever you put in the parenthesis and remove it.
             PrintList(theList);
         }
     }
