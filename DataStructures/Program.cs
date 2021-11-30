@@ -101,6 +101,13 @@ namespace DataStructures
             Console.WriteLine("\n===== SENTENCE IN REVERSE USING A LIST =====");
             Console.Write("\nPlease enter a sentence: ");
             string sentence = Console.ReadLine();
+
+            while (ContainsInvalidCharacter(sentence))
+            {
+                Console.Write("Please enter a sentence that does not contain numbers or special characters: ");
+                sentence = Console.ReadLine();
+            }
+
             string reversedSentence = ReverseSentence(sentence);
             Console.WriteLine(reversedSentence);
         }
@@ -129,5 +136,5 @@ namespace DataStructures
  * ----- EXTRA CHALLENGES -----
  * Consider cases where the user does not enter a single word but a sentence instead. --- COMPLETE
  * ... Do not reverse the entire sentence, instead reverse each word in the sentence, keeping the words in their original positions. --- COMPLETE
- * Validate user input: make sure the user is only entering words and not symbols or numbers.
+ * Validate user input: make sure the user is only entering words and not symbols or numbers. --- COMPLETE
  */
