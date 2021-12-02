@@ -10,6 +10,7 @@ namespace MovieDatabase
         private int Runtime;
         private int ReleaseYear;
 
+        // Constructors get called automatically when you make an instance of a class. Constructors always share the same name as the class.
         public Movie(string movieTitle, string movieCategory, int movieRuntime, int movieReleaseYear)
         {
             Title = movieTitle;
@@ -120,7 +121,7 @@ namespace MovieDatabase
                     }
                 }
 
-                Console.Write("\nWould you like to peform another search? (YES/NO): ");
+                Console.Write("\nWould you like to perform another search? (YES/NO): ");
                 goAgain = Console.ReadLine().ToLower();
             } while (goAgain == "yes");
 
