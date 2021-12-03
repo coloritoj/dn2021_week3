@@ -28,19 +28,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blackjack", "Blackjack\Blac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieDatabase", "MovieDatabase\MovieDatabase.csproj", "{7F0AE2E9-7DCB-4D6C-A427-430FE50C1007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieList_Jeff", "MovieList_Jeff\MovieList_Jeff.csproj", "{8027B4AE-0AC9-44B4-9296-0D118F309267}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieList_Jeff", "MovieList_Jeff\MovieList_Jeff.csproj", "{8027B4AE-0AC9-44B4-9296-0D118F309267}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{E4C45328-3E4E-49D7-A576-C8878FD893DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game", "Game\Game.csproj", "{E4C45328-3E4E-49D7-A576-C8878FD893DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mammals", "Mammals\Mammals.csproj", "{723D477A-5BA6-4BCE-8C2D-5005A441B41B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mammals", "Mammals\Mammals.csproj", "{723D477A-5BA6-4BCE-8C2D-5005A441B41B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloadDemo", "OverloadDemo\OverloadDemo.csproj", "{50128AF7-2E4C-4DA4-8B8E-C3E21DAC4E7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OverloadDemo", "OverloadDemo\OverloadDemo.csproj", "{50128AF7-2E4C-4DA4-8B8E-C3E21DAC4E7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mammals2", "Mammals2\Mammals2.csproj", "{426158F4-A974-4665-A555-9286C5CBB9DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mammals2", "Mammals2\Mammals2.csproj", "{426158F4-A974-4665-A555-9286C5CBB9DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsDemo", "AnimalsDemo\AnimalsDemo.csproj", "{5CD78178-35CE-4793-B66A-800E2A7CB8AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsDemo", "AnimalsDemo\AnimalsDemo.csproj", "{5CD78178-35CE-4793-B66A-800E2A7CB8AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsAndUsedCars", "CarsAndUsedCars\CarsAndUsedCars.csproj", "{1460BDB6-0B6E-4330-BB83-AC5E85455391}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsAndUsedCars", "CarsAndUsedCars\CarsAndUsedCars.csproj", "{1460BDB6-0B6E-4330-BB83-AC5E85455391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfStudy", "SelfStudy\SelfStudy.csproj", "{E9A3A973-95F7-46AF-AA8B-210B7B8C3A60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,10 @@ Global
 		{1460BDB6-0B6E-4330-BB83-AC5E85455391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1460BDB6-0B6E-4330-BB83-AC5E85455391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1460BDB6-0B6E-4330-BB83-AC5E85455391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A3A973-95F7-46AF-AA8B-210B7B8C3A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A3A973-95F7-46AF-AA8B-210B7B8C3A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A3A973-95F7-46AF-AA8B-210B7B8C3A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A3A973-95F7-46AF-AA8B-210B7B8C3A60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

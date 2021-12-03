@@ -143,7 +143,7 @@ namespace CarsAndUsedCars
                 Console.Write("Please enter the year of your vehicle: ");
                 int tradeYear = int.Parse(Console.ReadLine());
 
-                Console.Write("Please enter the price you are hoping to receive (no commaas): $");
+                Console.Write("Please enter the price you are hoping to receive (no commas): $");
                 decimal tradePrice = decimal.Parse(Console.ReadLine());
 
                 Console.Write("Please enter the mileage on your vehicle (no commas): ");
@@ -151,7 +151,7 @@ namespace CarsAndUsedCars
 
                 UsedCar.TradeIn(tradeMake, tradeModel, tradeYear, tradePrice, tradeMileage);
                 Console.WriteLine($"\nThanks for trading in your {tradeMake} {tradeModel}!");
-                Console.WriteLine("We will now list the vehicles (including your trade in) that are available for purchase.");
+                Console.WriteLine("We will now list the vehicles (including your trade-in) that are available for purchase.");
             }
 
             Console.WriteLine("\nHere is the list of vehicles available for sale:");
