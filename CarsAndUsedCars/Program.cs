@@ -60,6 +60,12 @@ namespace CarsAndUsedCars
         {
             return $"MAKE: {Make} | MODEL: {Model} | YEAR: {Year} | PRICE: ${Price} | MILEAGE: {Mileage}";
         }
+
+        public static void TradeIn(string tradeMake, string tradeModel, int tradeYear, decimal tradePrice, int tradeMileage)
+        {
+            UsedCar myTradeIn = new UsedCar(tradeMake, tradeModel, tradeYear, tradePrice, tradeMileage);
+            Car.carList.Add(myTradeIn);
+        }
     }
 
     class Program
@@ -67,6 +73,22 @@ namespace CarsAndUsedCars
         static bool isValidNumber(List<Car> listOfCars, int entry)
         {            
             if (entry >= 0 && entry < listOfCars.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        static bool isValidDecision(string decision)
+        {
+            if (decision == "trade")
+            {
+                return true;
+            }
+            else if (decision == "purchase")
             {
                 return true;
             }
@@ -96,7 +118,43 @@ namespace CarsAndUsedCars
             UsedCar carSix = new UsedCar("Jeep", "Compass", 2017, 18375, 160189);
             Car.carList.Add(carSix);
 
-            Console.WriteLine("Here is the list of vehicles available for sale:");
+            Console.WriteLine("Welcome to Ranch Motors!");
+            Console.Write("Would you like to trade-in your existing vehicle or go straight to purchasing a new one? (TRADE/PURCHASE): ");
+            string carDecision = Console.ReadLine().ToLower();
+            bool validDecision = isValidDecision(carDecision);
+
+            while (validDecision == false)
+            {
+                Console.Write("Sorry, that was not a valid decision. What would you like to do? (TRADE/PURCHASE): ");
+                carDecision = Console.ReadLine().ToLower();
+                validDecision = isValidDecision(carDecision);
+            }
+
+            if (carDecision == "trade")
+            {
+                Console.WriteLine("\nIn order to trade-in your existing vehicle, we will need some information first...");
+
+                Console.Write("Please enter the make of your vehicle: ");
+                string tradeMake = Console.ReadLine();
+
+                Console.Write("Please enter the model of your vehicle: ");
+                string tradeModel = Console.ReadLine();
+
+                Console.Write("Please enter the year of your vehicle: ");
+                int tradeYear = int.Parse(Console.ReadLine());
+
+                Console.Write("Please enter the price you are hoping to receive (no commaas): $");
+                decimal tradePrice = decimal.Parse(Console.ReadLine());
+
+                Console.Write("Please enter the mileage on your vehicle (no commas): ");
+                int tradeMileage = int.Parse(Console.ReadLine());
+
+                UsedCar.TradeIn(tradeMake, tradeModel, tradeYear, tradePrice, tradeMileage);
+                Console.WriteLine($"\nThanks for trading in your {tradeMake} {tradeModel}!");
+                Console.WriteLine("We will now list the vehicles (including your trade in) that are available for purchase.");
+            }
+
+            Console.WriteLine("\nHere is the list of vehicles available for sale:");
             Car.ListCars(Car.carList);
 
             Console.Write("\nPlease enter the number of the vehicle you wish to purchase: ");
@@ -114,7 +172,7 @@ namespace CarsAndUsedCars
             Console.WriteLine(Car.carList[indexOfVehiclePurchased]);
             Console.WriteLine("Our finance department will be in touch with you shortly regarding your purchase. Thank you!");
 
-            Console.WriteLine("\nHere is an updated list of cars remaining with your car removed:");
+            Console.WriteLine("\nHere is an updated list of vehicles remaining. The vehicle you just purchased has been removed: ");
             Car.Remove(indexOfVehiclePurchased);
             Car.ListCars(Car.carList);
         }
@@ -161,7 +219,7 @@ namespace CarsAndUsedCars
  * You can use \t tab escape characters to line things up, or if you want to get fancier, look up text formatters
  * 
  * ----- EXTRA CHALLENGES -----
- * Think about other methods which might be useful for your Car, such as "BuyBack" where you can add a used car to the list. Implement them and modify your app to take advantage of them.
+ * Think about other methods which might be useful for your Car, such as "BuyBack" where you can add a used car to the list. Implement them and modify your app to take advantage of them. --- COMPLETE!
  * Create an Admin mode which lets the user edit cars.
  * Provide search features:
  * ... View all cars of an entered make
